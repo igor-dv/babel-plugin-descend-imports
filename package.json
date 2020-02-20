@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-descend-imports",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Babel plugin to move imports down",
   "main": "src/index.js",
   "scripts": {

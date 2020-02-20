@@ -1,0 +1,8 @@
+__snapshots__
+node_modules
+*.log
+.idea
+yarn.lock
+npm-shrinkwrap.json
+package-lock.json
+.jest

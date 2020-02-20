@@ -1,13 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`babel-plugin-descend-imports should move matched import to the end 1`] = `
-"import { b } from '.b.bar';
+exports[`babel-plugin-descend-imports should move matched import before multiple matched imports in the end 1`] = `
+"// some comment
+import { b } from '.b.bar';
 import { a } from '.a.foo';
-const x = \\"the answer is potato\\";"
+import { c } from '.c.bar';
+import { d } from '.d.goo';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
+`;
+
+exports[`babel-plugin-descend-imports should move matched import to the end 1`] = `
+"// some comment
+import { b } from '.b.bar';
+import { c } from '.c.bar';
+import { d } from '.d.goo';
+import { a } from '.a.foo';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
+`;
+
+exports[`babel-plugin-descend-imports should move multiple matched imports before matched import in the end 1`] = `
+"// some comment
+import { c } from '.c.bar';
+import { a } from '.a.foo';
+import { b } from '.b.bar';
+import { d } from '.d.goo';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
+`;
+
+exports[`babel-plugin-descend-imports should move multiple matched imports to the end 1`] = `
+"// some comment
+import { a } from '.a.foo';
+import { d } from '.d.goo';
+import { b } from '.b.bar';
+import { c } from '.c.bar';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
+`;
+
+exports[`babel-plugin-descend-imports should not do anything when all matched 1`] = `
+"// some comment
+import { a } from '.a.foo';
+import { b } from '.b.bar';
+import { c } from '.c.bar';
+import { d } from '.d.goo';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
+`;
+
+exports[`babel-plugin-descend-imports should not do anything when matched in the end 1`] = `
+"// some comment
+import { a } from '.a.foo';
+import { b } from '.b.bar';
+import { c } from '.c.bar';
+import { d } from '.d.goo';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
+`;
+
+exports[`babel-plugin-descend-imports should not do anything when multiple matched in the end 1`] = `
+"// some comment
+import { a } from '.a.foo';
+import { b } from '.b.bar';
+import { c } from '.c.bar';
+import { d } from '.d.goo';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
 `;
 
 exports[`babel-plugin-descend-imports should not do anything when no matched imports 1`] = `
-"import { a } from '.a.foo';
+"// some comment
+import { a } from '.a.foo';
 import { b } from '.b.bar';
-const x = \\"the answer is potato\\";"
+import { c } from '.c.bar';
+import { d } from '.d.goo';
+const x = \\"The answer is potato\\";
+console.log(a, b, c, d, x);"
 `;

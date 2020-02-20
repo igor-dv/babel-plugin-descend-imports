@@ -1,7 +1,9 @@
 __snapshots__
 node_modules
 *.log
+*.test.js
 .idea
+.editorconfig
 yarn.lock
 npm-shrinkwrap.json
 package-lock.json

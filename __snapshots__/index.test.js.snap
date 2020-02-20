@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`babel-plugin-descend-imports should move matched import to the end 1`] = `
+"import { b } from '.b.bar';
+import { a } from '.a.foo';
+const x = \\"the answer is potato\\";"
+`;
+
+exports[`babel-plugin-descend-imports should not do anything when no matched imports 1`] = `
+"import { a } from '.a.foo';
+import { b } from '.b.bar';
+const x = \\"the answer is potato\\";"
+`;

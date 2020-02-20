@@ -1,18 +1,15 @@
+const path = require('path');
 const babel = require('@babel/core');
 
-const plugin = './index.js';
+const plugin = path.resolve(__dirname, './index.js');
 
 describe('babel-plugin-descend-imports', () => {
-    let code;
-
-    beforeEach(() => {
-        code = `
-        import { a } from '.a.foo'
-        import { b } from '.b.bar'
-        
-        const x = "the answer is potato"
-        `;
-    });
+    const code = `
+    import { a } from '.a.foo'
+    import { b } from '.b.bar'
+    
+    const x = "the answer is potato"
+    `;
 
     it('should move matched import to the end', () => {
         const options = { plugins: [[plugin, {pattern: /\.foo$/}]] };

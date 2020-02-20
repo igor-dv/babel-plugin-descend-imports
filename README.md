@@ -1,4 +1,4 @@
-#babel-plugin-descend-imports
+# babel-plugin-descend-imports
 
 This plugin helps you to descend specific import statements to the end of the imports block.
 

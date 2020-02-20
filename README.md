@@ -27,13 +27,44 @@ import { ChildComponent } from './ChildComponent';  // 👈 cild component can o
 export function ParentComponent() {}
 ```
 
+`ChildComponent` is imported after the `ParentComponent` css, so if parent wants 
+to customize the the child's css, it might be overridden by child's specificity
+
 In order to not take care of this, you can use this plugin, that will move the css imports 
 to the end of the imports block. 
 
 ## Installation
 
-TODO
+```sh
+yarn add babel-plugin-descend-imports -D
+```
 
 ## Usage
 
-TODO
+In babel config (js):
+
+```js
+module.exports = {
+    plugins: [
+        ['babel-plugin-descend-imports', { /* options */ }],
+    ],
+};
+```
+
+### Options
+
+#### `pattern`
+
+Pattern to match the import statement with.
+
+Regex example:
+
+```js
+module.exports = {
+    plugins: [
+        ['babel-plugin-descend-imports', {
+            pattern: /\.scss$/               // 👈 will descend the scss imports
+        }],
+    ],
+};
+```

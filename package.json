@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-descend-imports",
+  "version": "1.0.0",
+  "description": "Babel plugin to move imports down",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "babel",
+    "plugin",
+    "import"
+  ],
+  "author": "Igor",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.0",
+    "@babel/core": "^7.8.0",
+    "jest": "^25.1.0"
+  },
+  "dependencies": {
+    "@babel/types": "^7.8.0"
+  }
+}

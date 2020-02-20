@@ -51,8 +51,6 @@ module.exports = () => {
 
             // the matched import is not the last in the imports block
             if (foundImportNodes[0].index < index - 1) {
-                console.log(this.filename);
-
                 path.traverse(importsVisitor, {
                     targetedImport: foundImportNodes[0].node,
                     lastImport: path.node.body[index - 1],

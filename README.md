@@ -15,14 +15,14 @@ ChildComponent.js
 import React from 'react';
 import 'ChildComponent.css';
 
-export function ParentComponent() {}
+export function ChildComponent() {}
 ```
 
 ParentComponent.js
 ```jsx
 import React from 'react';
 import 'ParentComponent.css';                       // 👈 here is the problem
-import { ChildComponent } from './ChildComponent';  // 👈 cild component can override the css
+import { ChildComponent } from './ChildComponent';  // 👈 child component can override the css
 
 export function ParentComponent() {}
 ```
